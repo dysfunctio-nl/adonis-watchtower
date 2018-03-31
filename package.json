@@ -1,0 +1,33 @@
+{
+  "author": {
+    "name": "Dysfunctio.nl"
+  },
+  "bugs": {
+    "url": "https://github.com/dysfunctio-nl/adonis-watchtower/issues"
+  },
+  "description": "Permissions and Roles for AdonisJs Framework",
+  "devDependencies": {
+    "@adonisjs/fold": "^4.0.7",
+    "@adonisjs/sink": "^1.0.13"
+  },
+  "homepage": "https://github.com/dysfunctio-nl/adonis-watchtower#readme",
+  "keywords": [
+    "adonisjs",
+    "adonis-framework",
+    "permissions",
+    "roles",
+    "auth",
+    "watchtower"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@dysfunctionl/adonis-watchtower",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dysfunctio-nl/adonis-watchtower"
+  },
+  "scripts": {
+    "lint": "eslint src"
+  },
+  "version": "0.0.2"
+}
