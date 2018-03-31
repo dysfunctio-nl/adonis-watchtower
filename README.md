@@ -230,7 +230,7 @@ Route.get('/posts', ()=>{})
 
 ```js
 Route.get('/posts', ()=>{})
-    .middleware(['is:read-posts, create-posts'])
+    .middleware(['is:admin, user'])
 ```
 
 ## Views
@@ -258,7 +258,7 @@ Route.get('/posts', ()=>{})
 ### @Is
 
 ```js
-@is('update-users')
+@is('admin')
     // Do something if user has role
 @else
     // Otherwise do this
