@@ -13,10 +13,10 @@ const providers = [
 Register the following middleware inside `start/kernel.js` file.
 
 ```js
-const globalMiddleware = [
-  'WatchTower/Middleware/Is',
-  'WatchTower/Middleware/Can',
-]
+const namedMiddleware = {
+  can: 'WatchTower/Middleware/Can',
+  is: 'WatchTower/Middleware/Is'
+}
 ```
 
 If you wish to use the view helpers, register the following:
@@ -25,13 +25,6 @@ If you wish to use the view helpers, register the following:
 const globalMiddleware = [
   'WatchTower/Middleware/ViewBinding'
 ]
-```
-
-```js
-const namedMiddleware = {
-  can: 'WatchTower/Middleware/Permission',
-  is: 'WatchTower/Middleware/Role'
-}
 ```
 
 ## Setup
