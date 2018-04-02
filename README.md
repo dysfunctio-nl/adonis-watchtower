@@ -17,7 +17,7 @@ WatchTower is an addon for [Adonis](http://adonisjs.com/) that provides roles an
 - [Views](#views)
     - [@Can](#can)
     - [@Is](#is)
-    - 
+	
 ## Main Features
 * Roles & Permissions
 * Middleware (can/is)
@@ -41,10 +41,10 @@ const providers = [
 
 Register the following middleware inside `start/kernel.js` file:
 ```js
-const globalMiddleware = [
-  'WatchTower/Middleware/Is',
-  'WatchTower/Middleware/Can',
-]
+const namedMiddleware = {
+  can: 'WatchTower/Middleware/Can',
+  is: 'WatchTower/Middleware/Is'
+}
 ```
 
 If you wish to use the view tags (@can/is), register the following:
@@ -53,13 +53,6 @@ If you wish to use the view tags (@can/is), register the following:
 const globalMiddleware = [
   'WatchTower/Middleware/ViewBinding'
 ]
-```
-
-```js
-const namedMiddleware = {
-  can: 'WatchTower/Middleware/Permission',
-  is: 'WatchTower/Middleware/Role'
-}
 ```
 
 Add traits to the `app/Models/User.js` model:
