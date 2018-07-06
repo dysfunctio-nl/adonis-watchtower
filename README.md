@@ -218,12 +218,12 @@ await permission.syncRoles(['administrator', 'user'])
 
 ```js
 Route.get('/posts', ()=>{})
-    .middleware(['can:read-posts, create-posts'])
+    .middleware(['can:read-posts,create-posts'])
 ```
 
 ```js
 Route.get('/posts', ()=>{})
-    .middleware(['is:admin, user'])
+    .middleware(['is:admin,user'])
 ```
 
 ## Views
