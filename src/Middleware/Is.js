@@ -1,17 +1,19 @@
 'use strict'
 
+const CE = require('../Exceptions')
+
 class Is {
   async handle ({ auth }, next, roles) {
     if (roles == null) {
-      throw new Error('No roles were passed.')
+      throw CE.NoRolesException.invoke()
     }
 
     if (!auth || !auth.user) {
-      throw new Error('Access denied. You need to be authenticated to view this resource.')
+      CE.UserNotAuthenticatedException.invoke()
     }
 
     if (!await auth.user.is(roles)) {
-      throw new Error('Access denied. You do not have permission to view this resource.')
+      throw CE.PermissionException.invoke()
     }
 
     await next()
